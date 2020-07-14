@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "530238323111",
+    "firebase_url": "https://rangotime-62301.firebaseio.com",
+    "project_id": "rangotime-62301",
+    "storage_bucket": "rangotime-62301.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530238323111:android:a345ecba50970f4a44de82",
+        "android_client_info": {
+          "package_name": "com.example.rango_time_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530238323111-9g0b22jki2d64jvg2o796ijob760fjic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVXJF30oulk4ST4-yZBaYIjgd0h7UcCJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530238323111-9g0b22jki2d64jvg2o796ijob760fjic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
