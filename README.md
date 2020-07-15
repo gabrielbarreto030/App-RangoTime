@@ -5,7 +5,7 @@ A new Flutter project.
 
 <h4>An Online Snack Delivery App</h4>
 
-<img src='demo/1.png' width="300"> <img src='demo/2.png' width="300"> <img src='demo/3.png' width="300"> <img src='demo/4.png' width="300">
+<img src='demo/1.png' width="205"> <img src='demo/2.png' width="220"> <img src='demo/3.png' width="220"> <img src='demo/4.png' width="220">
 
 <h3>Functionalities</h3>
 <ul>
