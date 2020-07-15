@@ -9,8 +9,7 @@ class Entrega extends StatefulWidget {
 }
 
 class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
- 
-  double fontStatus=15.0;
+  double fontStatus = 15.0;
   AnimationController scalecontroller;
   Animation<double> scaleanimatie;
   double scaleinit = 1.0;
@@ -40,19 +39,24 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
       });
     });
   }
+
   @override
   void dispose() {
     super.dispose();
     scalecontroller.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
-      final String refer=ModalRoute.of(context).settings.arguments;
+    final String refer = ModalRoute.of(context).settings.arguments;
     return Scaffold(
         backgroundColor: Color(0xff34d2af),
         body: SingleChildScrollView(
-                  child: Stack(
+          child: Stack(
             children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height - 30,
+              ),
               Column(
                 children: <Widget>[
                   Padding(
@@ -62,13 +66,15 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                         Image(
                           image: AssetImage("imgs/entrega.jpg"),
                           fit: BoxFit.cover,
-                          width: MediaQuery.of(context).size.width*0.25,
-                          height: MediaQuery.of(context).size.height*0.12,
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          height: MediaQuery.of(context).size.height * 0.12,
                         ),
                         Text(
                           "Seu pedido foi realizado e \n será entregue de \n 10 à 20 minutos",
-                          style:
-                              TextStyle(color: Color(0xffffffff), fontSize: MediaQuery.of(context).size.height*0.028),
+                          style: TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize:
+                                  MediaQuery.of(context).size.height * 0.025),
                         )
                       ],
                     ),
@@ -78,7 +84,7 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                     child: Row(
                       children: <Widget>[
                         Container(
-                          width: MediaQuery.of(context).size.width*0.2,
+                          width: MediaQuery.of(context).size.width * 0.2,
                           height: 230,
                           child: Stack(
                             children: <Widget>[
@@ -97,23 +103,26 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                                     width: 30,
                                     height: 30,
                                     decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: Color(0xff707070)),
+                                        border: Border.all(
+                                            color: Color(0xff707070)),
                                         color: Color(0xff707070),
                                         shape: BoxShape.circle)),
                               ),
-                                 Positioned(                                 
+                              Positioned(
                                 right: moveAnimateRight,
                                 top: moveAnimateTop,
-                                child: ScaleTransition(                                
+                                child: ScaleTransition(
                                   scale: scaleanimatie,
-                                  child: pedidopronto?Container() :Container(                                  
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                          border: Border.all(
-                                              width: 2, color: Color(0xff707070)),
-                                          shape: BoxShape.circle)),
+                                  child: pedidopronto
+                                      ? Container()
+                                      : Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  width: 2,
+                                                  color: Color(0xff707070)),
+                                              shape: BoxShape.circle)),
                                 ),
                               ),
                               Positioned(
@@ -123,8 +132,8 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                                     width: 30,
                                     height: 30,
                                     decoration: BoxDecoration(
-                                        border:
-                                            Border.all(color: Color(0xff707070)),
+                                        border: Border.all(
+                                            color: Color(0xff707070)),
                                         color: pedidosaiuentrega
                                             ? Color(0xff707070)
                                             : Color(0xffffffff),
@@ -160,7 +169,7 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                           ),
                         ),
                         Container(
-                          width: MediaQuery.of(context).size.width*0.6,
+                          width: MediaQuery.of(context).size.width * 0.6,
                           height: 180,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,16 +177,20 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                             children: <Widget>[
                               Text("Seu pedido está sendo preparado",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: fontStatus)),
+                                      color: Colors.white,
+                                      fontSize: fontStatus)),
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                padding:
+                                    const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                 child: Text("Seu pedido saiu para entrega",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: fontStatus)),
+                                        color: Colors.white,
+                                        fontSize: fontStatus)),
                               ),
                               Text("Seu pedido chegou!!",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: fontStatus)),
+                                      color: Colors.white,
+                                      fontSize: fontStatus)),
                             ],
                           ),
                         ),
@@ -188,22 +201,26 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                     padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
                     child: Text(
                       "Muito obrigado pelo pedido!!!",
-                      style: TextStyle(color: Color(0xffffffff), fontSize: 24),
+                      style:
+                          TextStyle(color: Color(0xffffffff), fontSize: 24),
                     ),
                   ),
-                  GestureDetector(
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB (0,0,0,50),
-                        child: Image(image: AssetImage("imgs/rostopiscando.png")),
-                      )),
-                      SizedBox(                      
-                        height:10)
-                      
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    child: GestureDetector(
+                        onTap: () {},
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          child: Image(
+                              image: AssetImage("imgs/rostopiscando.png")),
+                        )),
+                  ),
                 ],
               ),
               Positioned(
-                bottom: 0,            
+                bottom: 0,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Center(
@@ -216,17 +233,19 @@ class _EntregaState extends State<Entrega> with TickerProviderStateMixin {
                       child: Container(
                         height: 50,
                         width: 240,
-                       // margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        // margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                         child: Align(
                           alignment: Alignment(0, 0.6),
                           child: Text(
                             "Voltar ao inicio",
-                            style: TextStyle(color: Colors.white, fontSize: 25),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),
                       ),
                       onPressed: () {
-                        Navigator.of(context).popAndPushNamed("/Home",arguments: LoginUser(refer));
+                        Navigator.of(context).popAndPushNamed("/Home",
+                            arguments: LoginUser(refer));
                       },
                     ),
                   ),
