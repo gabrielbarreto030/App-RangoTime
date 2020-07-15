@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rango_time_app/SplashScreen/splash-conttroler.dart';
@@ -35,30 +34,31 @@ class SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
-    return Container(
-      decoration: new BoxDecoration(color: Color(0xffffca73)),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset("imgs/Logo.png"),
-            SizedBox(
-              height: 120,
-            ),
-            AnimatedOpacity(
-                duration: Duration(seconds: 3),
-                curve: Curves.ease,
-                opacity: animation,
-                child: Text(
-                  "Satisfação no sorriso!!!",
-                  style: TextStyle(
-                      color: Color(0xff707070),
-                      fontSize: 20,
-                      decoration: TextDecoration.none),
-                ))
-          ],
+    return  Container(
+        decoration: new BoxDecoration(color: Color(0xffffca73)),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset("imgs/Logo.png"),
+              SizedBox(
+                height: 120,
+              ),
+              AnimatedOpacity(
+                  duration: Duration(seconds: 3),
+                  curve: Curves.ease,
+                  opacity: animation,
+                  child: Text(
+                    "Satisfação no sorriso!!!",
+                    style: TextStyle(
+                        color: Color(0xff707070),
+                        fontSize: 20,
+                        decoration: TextDecoration.none),
+                  ))
+            ],
+          ),
         ),
-      ),
+      
     );
   }
 }
